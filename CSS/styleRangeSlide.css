@@ -1,0 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,700&display=swap');
+
+main{
+    font-family: 'Lato', sans-serif;
+}
+.slideRang{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #edf1f4;
+    min-height: 100vh;
+}
+.box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05),#edf1f4);
+    border-radius: 40px;
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.1), -15px -15px 20px #fff;
+}
+.range{
+    width: 400px;
+    height: 15px;
+    appearance: none;
+    background: #edf1f4;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1), -5px -5px 10px #fff, inset 5px 5px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.range::-webkit-slider-thumb{
+    cursor: pointer;
+    appearance: none;
+    width: 25px;
+    height: 15px;
+    background: linear-gradient(to right , #2b7b9b, #1A5F7A);
+    border-radius: 40px;
+    box-shadow: -407px 0 0 400px  #2b7b9b;
+}
+#rangeValue{
+    font-size: 1.25em;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    background: #2b7b9b;
+    font-weight: 500;
+    width: 70px;
+    border-radius: 25px;
+    margin-left: 15px ;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1), 
+    -4px -4px 10px #fff, inset 4px 4px 10px rgba(0,0,0,0.1), inset -5px -5px 5px rgba(255,255,255,0.25);
+}
