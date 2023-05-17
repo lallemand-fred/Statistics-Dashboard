@@ -1,3 +1,4 @@
+//value for range sliders
 function rangeSlider(value){
     document.getElementById('rangeValue').innerHTML = value}
 function rangeSlider1(value){ 
@@ -12,3 +13,21 @@ function rangeSlider5(value){
     document.getElementById('rangeValue5').innerHTML = value }
 function rangeSlider6(value){ 
     document.getElementById('rangeValue6').innerHTML = value }
+
+//Sidebar toggle
+let sidebarOpen = false
+let sidebar = document.getElementById("sidebar") 
+
+function openSidebar() {
+    if(!sidebarOpen){
+        sidebar.classList.add("sidebar-responsive")
+        sidebarOpen = true
+    }
+}
+
+function closeSidebar() {
+    if(sidebarOpen){
+        sidebar.classList.remove("sidebar-responsive")
+        sidebarOpen = false
+    }
+}
