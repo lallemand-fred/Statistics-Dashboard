@@ -121,7 +121,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 260px 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 3fr;
+    grid-template-rows: 70px 3fr;
     grid-template-areas: 
     "sidebar header header header"
     "sidebar main main main";
@@ -195,8 +195,8 @@ body{
 .container{
     overflow: hidden;
     position: absolute;
-    width: 99%;
-    height: 90%;
+    width:  calc(100% - 260px);
+    height: calc(100% - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,15 +238,17 @@ body{
     color: rgba(255, 255, 255, 0.95);
 }
 .main-title h2{
+    padding-left: 20px;
     z-index: 10;
 }
 .main-title{
     z-index: 10;
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 .main-cards{
+    padding-left: 20px;
     z-index: 10;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -292,6 +294,7 @@ body{
     padding-left: 5px;
 }
 .charts{
+    padding-left: 20px;
     z-index: 10;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -336,6 +339,13 @@ body{
     .sidebar-title > span{
         display: inline;
     }
+    .container{
+        width:  100% ;
+    }
+    .charts{
+        padding-left: 20px;
+        gap: 10px;
+    }
 }
 @media (max-width: 770px) {
     .lettre{
@@ -358,5 +368,9 @@ body{
 @media (max-width: 570px){
     .header-left{
         display: none;
+    }
+    .charts{
+        transform: scale(0.5) translate(-141px, -469px );
+        margin-top: 15px;
     }
 } 
