@@ -213,13 +213,13 @@ body{
     border-radius: 50%;
 }
 .container .block:nth-child(3n + 1){
-    background: #444;
+    background: #4d4d4d;
 }
 .container .block:nth-child(3n + 2){
-    background: #fff;
+    background: #a5a5a5;
 }
 .container .block:nth-child(3n + 3){
-    background: #03a9f4;
+    background: #2e2e2e;
 }
 .container button {
     position: relative;
