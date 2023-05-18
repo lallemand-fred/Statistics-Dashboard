@@ -6,26 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statistics Dashboard</title>
     <link rel="shortcut icon" href="">
-    <script src="./JS/chargement.js" defer></script>
-    <script src="./JS/app.js" defer></script>
+    <script src="./JS/app.js" async></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!-- --------------------Page LOADER-------------------- -->
-    <div class="loader" >
-        <s class="lettre">C</s>
-        <s class="lettre">H</s>
-        <s class="lettre">A</s>
-        <s class="lettre">R</s>
-        <s class="lettre">G</s>
-        <s class="lettre">E</s>
-        <s class="lettre">M</s>
-        <s class="lettre">E</s>
-        <s class="lettre">N</s>
-        <s class="lettre">T</s>
-    </div>
     <div class="grid-container">
 
         <header class="header">
@@ -49,7 +35,7 @@
                 </div>
                 <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
             </div>
-            <ul class="sidebar-list" onclick="generate()">
+            <ul class="sidebar-list">
                 <li class="sidebar-list-item">
                     <span class="material-icons-outlined">dashboard</span>Dashboard
                 </li>
@@ -75,13 +61,6 @@
         </aside>
 
         <main class="main-container">
-
-            <div class="container">
-                <!-- <button onclick="generate();">Generate</button>
-                <button onclick="circle(); generate();" class="circleBtn">Circle | Square</button> -->
-            </div>
-
-
             <div class="main-title">
                 <h2>DASHBOARD</h2>
             </div>
@@ -133,9 +112,7 @@
         </main>
 
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- ApexCharts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.40.0/apexcharts.min.js"></script>
-    <script src="./JS/appBackGenerator.js"></script>
 </body>
 </html>
