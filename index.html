@@ -37,7 +37,7 @@
             </div>
             <div class="header-right">
                 <span class="material-icons-outlined">video_call</span>
-                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">notification_important</span><div class="numbAlerts">15</div>
                 <span class="material-icons-outlined">account_circle</span>
             </div>
         </header>
@@ -51,32 +51,33 @@
             </div>
             <ul class="sidebar-list" onclick="generate()">
                 <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">dashboard</span>Dashboard
+                    <span class="material-icons-outlined">dashboard</span>Tableau de bord                    
                 </li>
                 <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">video_settings</span>Vidéos
+                    <span class="material-icons-outlined iconeContenuBg">filter_none</span><span class="material-icons-outlined iconeContenuFront">smart_display</span>Contenu
+                    
                 </li>
                 <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">category</span>Categories
+                    <span class="material-icons-outlined">chat</span>Commentaires
                 </li>
                 <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">groups</span>Customers
-                </li>
-                <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">notification_important</span>Alerts <div class="numbAlerts">15</div>
+                    <span class="material-icons-outlined">euro_symbol</span>Revenus
                 </li>
                 <!-- <li class="sidebar-list-item">
                     <span class="material-icons-outlined">fact_check</span>Inventory
-                </li>
-                <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">poll</span>Reports
-                </li>
-                <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">settings</span>Settings
                 </li> -->
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">poll</span>Données
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">email</span>Messages
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">settings</span>Paramètres
+                </li>
             </ul>
         </aside>
-
+        
         <main class="main-container">
             
             <div class="container">
@@ -86,16 +87,16 @@
 
 
             <div class="main-title">
-                <h2>DASHBOARD</h2>
+                <h2>Tableau de bord</h2>
             </div>
             <div class="main-cards">
 
                 <div class="card">
                     <div class="card-inner">
-                        <h3>VIDEOS</h3>
-                        <span class="material-icons-outlined">video_settings</span>
+                        <h3>VIDÉOS</h3>
+                        <span class="material-icons-outlined">ondemand_video</span>
                     </div>
-                    <h1>249</h1>
+                    <h1>549</h1>
                 </div>
                 
                 <div class="card">
@@ -108,10 +109,10 @@
                 
                 <div class="card">
                     <div class="card-inner">
-                        <h3>CUSTOMERS</h3>
+                        <h3>ABONÉES</h3>
                         <span class="material-icons-outlined">groups</span>
                     </div>
-                    <h1>1500</h1>
+                    <h1>154k</h1>
                 </div>
                 
                 <div class="card">
@@ -125,7 +126,7 @@
             </div>
             <div class="charts">
                 <div class="charts-card">
-                    <h2 class="chart-title">Top 5 Products</h2>
+                    <h2 class="chart-title">Abonées des derniers mois</h2>
                     <div id="bar-chart"></div>
                 </div>
                 <div class="charts-card">

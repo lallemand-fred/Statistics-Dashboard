@@ -65,8 +65,8 @@ function closeSidebar() {
 // BAR CHART
 var barChartOptions = {
     series: [{
-      data: [10, 8, 6, 4, 2],
-      name: "Products",
+      data: [1000, 400, 800, 200, 500],
+      name: "Abonées",
     }],
     chart: {
       type: "bar",
@@ -128,7 +128,7 @@ var barChartOptions = {
       theme: "dark",
     },
     xaxis: {
-      categories: ["Laptop", "Phone", "Monitor", "Headphones", "Camera"],
+      categories: ["Janvier", "Février", "Mars", "Avril", "Mai"],
       title: {
         style: {
           color: "#f5f7ff",

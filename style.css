@@ -202,7 +202,7 @@ body{
     border-radius: 4px;
     letter-spacing: 2px;
 }
-.sidebar-list-item:nth-child(2):hover{
+/* .sidebar-list-item:nth-child(2):hover{
     background-color: #43498a;
 }
 .sidebar-list-item:nth-child(3):hover{
@@ -213,9 +213,13 @@ body{
 }
 .sidebar-list-item:nth-child(5):hover{
     background-color: #885d5d;
+} */
+.iconeContenuFront{
+    position: absolute;
+    transform: translate(-42px, 8px);
 }
 .numbAlerts{
-    /* transform: translate(105px, -18px); */
+    transform: translate(36px, -8px) scale(0.7);
     padding: 0.5px;
     position: absolute;
     color: #fff;
