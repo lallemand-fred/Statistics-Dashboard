@@ -112,6 +112,7 @@ body{
     opacity: 0;
     transition: opacity 0.4s ease-out;
 }
+
 .material-icons-outlined{
     vertical-align: middle;
     line-height: 1px;
@@ -261,22 +262,7 @@ body{
 .container .block:nth-child(3n + 3){
     background: linear-gradient(45deg, #232733, transparent, #35445e);
 }
- .block{
-    animation: moveBlock 10s ease-in-out infinite ;
-}
-@keyframes moveBlocks{
-    0%{
-        transform: scale(0);
-    }
-    50%{
-        transform: scale(0.9);
-        
-    }
-    
-    100%{
-        transform: scale(0);
-    }
-}
+
 .container button {
     position: relative;
     z-index: 1;
