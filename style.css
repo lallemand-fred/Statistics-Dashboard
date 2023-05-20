@@ -42,7 +42,7 @@
 }
 body{
     font-family: 'Lato', cursive;
-    background-color: #1d2634;
+    background-color: #0d2330;
     color: #9e9ea4;
 }
 /* ---------------------Chargement----------------------------- */
@@ -144,7 +144,7 @@ body{
 #sidebar{
     grid-area: sidebar;
     height: 100%;
-    background-color: #263043;
+    background-color: #282a3f;
     overflow-y: auto;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -511,13 +511,14 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
+    flex-direction: column;
 }
 .container01 .progress{
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     color: #fff;
     background: #444 linear-gradient(to right, transparent
@@ -552,7 +553,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5em;
+    font-size: 1.5em;
     z-index: 1;
     font-weight: 500;
 }
@@ -562,9 +563,7 @@ body{
 }
 .container01 .progress h4{
     position: absolute;
-    top: 62%;
-    left: 50%;
-    transform: translate(-50%);
+    transform: translate(0, 0);
     z-index: 1;
     font-weight: 700;
     color: var(--clr);
