@@ -9,7 +9,7 @@
     text-decoration: none;
     padding: 0;
     margin: 0;
-    /* border: 2px solid red ; */
+    /* border: 1px solid red ; */
 }
 /* -----------------Variables----------------- */
 .light-mode{
@@ -365,7 +365,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .container .block{
     position: absolute;
     width: 50px;
@@ -493,27 +492,23 @@ body{
     border-radius: 5px;
     box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
+
 .chart-title{
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-/* #corp-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-.container01{
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    flex-direction: column;
+    text-align: center;
+}
+
+#pourcentStat1{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+#pourcentStat2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#pourcentStat3{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .container01 .progress{
     position: relative;
@@ -547,7 +542,6 @@ body{
     background: #444;
     transform: rotate(calc(((var(--i) - 0) * 0.01turn)));
 }
-
 .container01 .progress h3{
     position: absolute;
     top: 50%;
@@ -562,14 +556,24 @@ body{
     font-weight: 400;
 }
 .container01 .progress h4{
-    position: absolute;
-    transform: translate(0, 0);
+    position: relative;
     z-index: 1;
     font-weight: 700;
     color: var(--clr);
     text-transform: uppercase;
 }
-
+.textPourcent {
+    transform: translate(95px , -81px);
+    position: absolute;
+}
+.valeurIconePoucent{
+    padding-left: 5px;
+    font-size: 10px;
+}
+.iconeOK{
+    font-size: 15px;
+    padding-left: 5px;
+}
 /* -------------------------Medias queries--------------------- */
 
 @media (max-width: 1040px) {
