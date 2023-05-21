@@ -555,22 +555,39 @@ body{
     font-size: 0.65em;
     font-weight: 400;
 }
-.container01 .progress h4{
+.textPourcent h4{
     position: relative;
     z-index: 1;
     font-weight: 700;
     color: var(--clr);
     text-transform: uppercase;
+    padding-bottom: 5px;
 }
 .textPourcent {
     transform: translate(95px , -81px);
     position: absolute;
 }
+/* ------------------- ▲▼ ------------------- */
+.iconeValeurOk{
+    z-index: 15;
+    transform: translate(33px , -70px);
+    position: absolute;
+}
 .valeurIconePoucent{
-    padding-left: 5px;
-    font-size: 10px;
+    color: #5c775f;
+    font-size: 14px;
+}
+.bgIcones{
+    transform: translate(105px , -4px);
+    border-radius: 50%;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #5c775f;
 }
 .iconeOK{
+    /* transform: translate(85px , -20px); */
+    color: #fff;
     font-size: 15px;
     padding-left: 5px;
 }
