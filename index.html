@@ -33,7 +33,10 @@
                 <span class="material-icons-outlined openBurgerIcone">menu</span>
             </div>
             <div class="header-left">
-                <!-- <span class="material-icons-outlined">search</span> -->
+                <div>
+                    <span class="material-icons-outlined iconeRechercher">search</span>
+                    <input type="text" class="inputRechercher" name="message" placeholder="Rechercher">
+                </div>
             </div>
             <div class="header-right">
                 <span class="material-icons-outlined">video_call</span>
@@ -44,11 +47,7 @@
 
         <aside id="sidebar">
             <div class="sidebar-title">
-                <!-- <div class="sidebar-brand">
-                    <span class="material-icons-outlined">shopping_cart</span>STORE
-                </div> -->
                 <div class="containerCompte">
-                    <!-- <h2>Compte</h2> -->
                     <span class="imageProfil"></span>
                     <div class="progress" style="--i:86;--clr:#6b728e;">
                         <h3>86<span>%</span><s> </s><span>Activité</span></h3>
@@ -59,12 +58,11 @@
                 <span class="material-icons-outlined closeIcone" onclick="closeSidebar()">close</span>
             </div>
             <ul class="sidebar-list" onclick="generate()">
-                <li class="sidebar-list-item">
+                <li class="sidebar-list-item active">
                     <span class="material-icons-outlined">dashboard</span>Tableau de bord                    
                 </li>
                 <li class="sidebar-list-item">
-                    <span class="material-icons-outlined iconeContenuBg">filter_none</span><span class="material-icons-outlined iconeContenuFront">smart_display</span>Contenu
-                    
+                    <span class="material-icons-outlined iconeContenuBg">filter_none</span><span class="material-icons-outlined iconeContenuFront">smart_display</span>Contenu  
                 </li>
                 <li class="sidebar-list-item">
                     <span class="material-icons-outlined">chat</span>Commentaires<div class="numbCommentaires">134</div>
@@ -72,9 +70,6 @@
                 <li class="sidebar-list-item">
                     <span class="material-icons-outlined">euro_symbol</span>Revenus
                 </li>
-                <!-- <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">fact_check</span>Inventory
-                </li> -->
                 <li class="sidebar-list-item">
                     <span class="material-icons-outlined">poll</span>Données
                 </li>
@@ -90,8 +85,6 @@
         <main class="main-container">
             
             <div class="container">
-                <!-- <button onclick="generate();">Generate</button>
-                <button onclick="circle(); generate();" class="circleBtn">Circle | Square</button> -->
             </div>
 
 
@@ -131,7 +124,7 @@
                     </div>
                     <h1>1.5k / Jours</h1>
                 </div>
-
+                <!-- <span class="material-icons-outlined iconeOK">mood</span> -->
             </div>
             <div class="charts">
                 <div class="charts-card">
@@ -148,15 +141,17 @@
                             </div>
                             <!-- ▲▼ -->
                             <div class="textPourcent">
-                                <div class="bgIcones">
-                                    <span class="material-icons-outlined iconeOK">thumb_up</span>
+                                <div class="bgIconesVert">
                                 </div>
                                 <h4>Visionnage</h4>
                                 <h5> de plus que les 30 derniers jours</h5>
                             </div>
                             <div id="pourcentStat2">                                
-                                <div class="progress less" style="--i:20;--clr:#926b4b;">
-                                    <h3>20<span>%</span></h3>
+                                <div class="progress less" style="--i:05;--clr:#926b4b;">
+                                    <h3>05<span>%</span></h3>
+                                    <div class="iconeValeurOk">
+                                        <span class="valeurIconePoucent">▼</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="textPourcent">
@@ -166,10 +161,13 @@
                             <div id="pourcentStat3">                                
                                 <div class="progress less " style="--i:12;--clr:#885d5d;">
                                     <h3>12<span>%</span></h3>
+                                    <div class="iconeValeurOk">
+                                        <span class="valeurIconePoucent">▼</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="textPourcent">
-                                <h4>Like</h4>
+                            <div class="textPourcent" style="--clr:#885d5d;">
+                                <h4>Like</h4><span class="material-icons-outlined bgIconesI">report_gmailerrorred</span>
                                 <h5> de moins que les 30 derniers jours</h5>
                             </div>
                         </div>

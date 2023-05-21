@@ -61,6 +61,14 @@ function closeSidebar() {
         sidebarOpen = false
     }
 }
+//selection menu
+let list = document.querySelectorAll('.sidebar-list li')
+function active(){
+    list.forEach((i) => 
+    i.classList.remove('active'))
+    this.classList.add('active')
+}
+list.forEach((i) => i.addEventListener('click',active ))
 //CHARTS
 // BAR CHART
 var barChartOptions = {
