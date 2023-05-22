@@ -37,7 +37,7 @@
     --font-size-chargemnt-Mobil:2.5em;
     --font-size-chargemnt:5.5em;
     --text-chargement01: #63636350;
-    --text-chargement02: #fc3dac81;
+    --text-chargement02: #43498a;
     --bg-chargement:  #000;
 }
 body{
@@ -156,7 +156,10 @@ body{
     height: 60px;
     width: 60px;
 }
-
+.formRecherche{
+    position: relative;
+    padding-left: 25px;
+}
 .bgRecherche{
     position: absolute;
     transform: translate(-51px, 0px);
@@ -167,11 +170,13 @@ body{
     z-index: 1;
     cursor: pointer;
 }
-.iconeRechercher{
-    transform: translate(310px, 15px);
+form .iconeRechercher{
+    transform: translate(311px, -5px);
     font-size: 1.8rem;
     position: absolute; 
     z-index: 3;
+    cursor: pointer;
+    color: #9195a0;
 }
 .inputRechercher{
     background: #0d233000;
@@ -188,7 +193,7 @@ body{
     padding: 3px;
 }
 .header-right span:nth-child(2){
-    color: #a12525;
+    color: #d50000;
 }
 .numbAlerts{
     transform: translate(43px, -15px) ;
@@ -268,7 +273,7 @@ body{
     border-radius: 50%;
     color: #fff;
     background: #444 linear-gradient(to right, transparent
-    50%, var(--clr) 0);
+    50%, #0d2330, var(--clr) 0);
 }
 .containerCompte .progress::before{
     content: '';
@@ -665,6 +670,9 @@ body{
     text-transform: uppercase;
     padding-bottom: 5px;
 }
+.textPourcent h5{
+    font-size: 0.9rem;
+}
 .textPourcent {
     display: flex;
     flex-direction: column;
@@ -724,8 +732,9 @@ body{
         height: 60px;
         width: 60px;
     }
-    .iconeRechercher{
-        transform: translate(290px, 15px);
+    
+    form .iconeRechercher{
+        transform: translate(290px, -6px);
         position: absolute;
     }
     .bgRecherche{
@@ -777,11 +786,12 @@ body{
     .logo{
         transform: translate(-10% , -15px);
     }
+    
     .bgRecherche{
         transform: translate(-50px, 0px);
     }
-    .iconeRechercher{
-        transform: translate(240px, 15px);
+    form .iconeRechercher{
+        transform: translate(240px, -6px);
         position: absolute;
     }
     .inputRechercher{
@@ -807,17 +817,24 @@ body{
 
 
 @media (max-width: 570px){
+    .logo{
+        transform: translate(5px , -15px);
+    }
+    .formRecherche{
+        padding-left: 0px;
+        transform: translate(-10px , 0px);
+    }
     .bgRecherche{
         transform: translate(-50px, 0px);
     }
-    .iconeRechercher{
-        transform: translate(190px, 15px);
+    form .iconeRechercher{
+        transform: translate(180px, -6px);
         position: absolute;
     }
     .inputRechercher{
         width: 150px;
         padding-left: 9px;
-        margin-left: 80px;
+        margin-left: 70px;
     }
     .main-cards{
         padding-left: 10px;
