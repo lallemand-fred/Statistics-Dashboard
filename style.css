@@ -140,22 +140,92 @@ body{
 .menu-icon{
     display: none;
 }
-.iconeRechercher{
-    transform: translate(4px, 15px);
-    font-size: 1.8rem;
+.header-left{
+    padding-left: 100px;
+}
+.logoImg{
+    width: 60px;
+}
+.logo{
+    transform: translate(-90px , -15px);
     position: absolute;
+    height: 60px;
+    width: 60px;
+}
+
+.bgRecherche{
+    position: absolute;
+    transform: translate(-51px, 0px);
+    background: #535565;
+    border-radius: 0 15px 15px 0; 
+    width: 50px;
+    height: 30px;
+    z-index: 1;
+    cursor: pointer;
+}
+.iconeRechercher{
+    transform: translate(310px, 15px);
+    font-size: 1.8rem;
+    position: absolute; 
+    z-index: 3;
 }
 .inputRechercher{
     background: #0d233000;
-    color: #fff;
-    border: 2px solid #fff;
+    color: #ffffff;
+    border: 2px solid #535565;
     font-size: 1rem;
-    width: 250px;
+    width: 350px;
     height: 30px;
     border-radius: 15px;
     margin-left: 0px;
-    padding-left: 40px;
+    padding-left: 10px;
+    
 }
+.header-right .material-icons-outlined{
+    padding: 3px;
+}
+.header-right span:nth-child(2){
+    color: #885d5d;
+}
+.numbAlerts{
+    transform: translate(43px, -15px) ;
+    position: absolute;
+    color: #fff;
+    width: 25px;
+    height: 15px;
+    padding-left: 3px;
+    background-color: red;
+    border-radius: 40px;
+    font-size:11px;
+    font-weight: 900;
+}
+.imageProfilLogin{
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+}
+.imageProfilBGLogin{
+    cursor: pointer;
+    position: absolute;
+    background: #b9bbc0a8;
+    width: 37px;
+    height: 37px;
+    transform: translate(-40px , 2.5px);
+    border-radius: 50%;
+    color: #000;
+    font-size: 10px;
+    font-weight: 900;
+    padding-top: 19px;
+    padding-left: 3px;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+.imageProfilLogin:hover, .imageProfilBGLogin:hover{
+    opacity: 1;
+    
+}
+
 /* --------------Sidebar--------------- */
 #sidebar{
     grid-area: sidebar;
@@ -171,18 +241,6 @@ body{
     align-items: center;
     padding: 30px 30px 30px 30px;
     margin-bottom: 30px;
-}
-.numbAlerts{
-    transform: translate(35px, -5px) ;
-    position: absolute;
-    color: #fff;
-    width: 25px;
-    height: 15px;
-    padding-left: 3px;
-    background-color: red;
-    border-radius: 40px;
-    font-size:11px;
-    font-weight: 900;
 }
 .containerCompte{
     position: relative;
@@ -394,19 +452,19 @@ body{
     box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
     border-radius: 30px;
 }
-.container.circle .block{
-    border-radius: 50%;
-}
+
 .container .block:nth-child(3n + 1){
     background: linear-gradient(45deg, transparent, #1d2634);
+    animation-delay:4s ;
 }
 .container .block:nth-child(3n + 2){
     background: linear-gradient(45deg, #28283a, transparent);
+    animation-delay:4s ;
 }
 .container .block:nth-child(3n + 3){
     background: linear-gradient(45deg, #232733, transparent, #35445e);
+    animation-delay:4s ;
 }
-
 .container button {
     position: relative;
     z-index: 1;
@@ -624,9 +682,25 @@ body{
         "header"
         "main";
     }  
-    .iconeRechercher{
-        transform: translate(85px, 15px);
+    .header-left{
+        padding-left: 00px;
+    }
+    
+    .logoImg{
+        width: 60px;
+    }
+    .logo{
+        transform: translate(-10% , -15px);
         position: absolute;
+        height: 60px;
+        width: 60px;
+    }
+    .iconeRechercher{
+        transform: translate(290px, 15px);
+        position: absolute;
+    }
+    .bgRecherche{
+        transform: translate(-51px, 0px);
     }
     .inputRechercher{
         width: 250px;
@@ -645,7 +719,7 @@ body{
         padding-left: 30px;
     }
     .iconeParametres:hover{
-        width: 230px;
+        width: 223px;
     }
     .menu-icon{
         display: inline;
@@ -666,8 +740,14 @@ body{
     }
 }
 @media (max-width: 770px) {
+    .logo{
+        transform: translate(-10% , -15px);
+    }
+    .bgRecherche{
+        transform: translate(-50px, 0px);
+    }
     .iconeRechercher{
-        transform: translate(85px, 15px);
+        transform: translate(240px, 15px);
         position: absolute;
     }
     .inputRechercher{
@@ -689,22 +769,22 @@ body{
         margin-top: 30px;
         padding-right: 20px;
     }
-    
 }
 
 
 @media (max-width: 570px){
+    .bgRecherche{
+        transform: translate(-50px, 0px);
+    }
     .iconeRechercher{
-        transform: translate(85px, 15px);
+        transform: translate(190px, 15px);
         position: absolute;
     }
     .inputRechercher{
         width: 150px;
+        padding-left: 9px;
         margin-left: 80px;
     }
-    /* .header-left{
-        display: none;
-    } */
     .main-cards{
         padding-left: 10px;
         padding-right: 10px;
@@ -716,8 +796,16 @@ body{
         padding-right: 20px;
     }
 } 
-@media (max-width: 450px){
-    .header-left{
+@media (max-width: 458px){
+    .logo{
+        transform: translate(-10% , -30px);
+    }
+    .header-left form{
+        display: none;
+    }
+}
+@media (max-width: 320px){
+    .logo{
         display: none;
     }
 }

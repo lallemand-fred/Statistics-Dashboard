@@ -1,6 +1,6 @@
 //Generateur de background
 let container = document.querySelector('.container')
-for (var i=0; i<=100; i++){
+for (var i=0; i<=1000; i++){
     let blocks = document.createElement('div')
     blocks.classList.add('block')
     container.appendChild(blocks)
@@ -15,13 +15,13 @@ function generate(){
     anime({
         targets : '.block',
         translateX : function(){
-            return anime.random(-700,700)
+            return anime.random(-1500,1500)
         },
         translateY : function(){
-            return anime.random(-500,500)
+            return anime.random(-900,900)
         },
         scale : function(){
-            return anime.random(1,5)
+          return anime.random(1,7)
         }
     })
 }
