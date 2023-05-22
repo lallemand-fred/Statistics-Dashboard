@@ -25,6 +25,7 @@
         <s class="lettre">E</s>
         <s class="lettre">N</s>
         <s class="lettre">T</s>
+        <img class="logoChargement" src="./medias/figma/WVGrand.png" alt="">
     </div>
     <div class="grid-container">
 
@@ -33,7 +34,7 @@
                 <span class="material-icons-outlined openBurgerIcone">menu</span>
             </div>
             <div class="header-left">
-                <span class="logo"><img class="logoImg" src="./medias/figma/WVGrand.png" alt=""></span>
+                <span class="logo"><img class="logoImg" src="./medias/figma/WebViewer01WV.png" alt=""></span>
                 <form>
                     <span class="material-icons-outlined iconeRechercher">search</span>
                     <input type=" search" class="inputRechercher" name="message" placeholder="Rechercher">
@@ -43,7 +44,10 @@
             <div class="header-right">
                 <span class="material-icons-outlined">video_call</span>
                 <span class="material-icons-outlined">notification_important</span><div class="numbAlerts">145</div>
-                <span class="material-icons-outlined"><img src="./medias/profils/profil300Px.jpg" class="imageProfilLogin" alt=""></span><span class="imageProfilBGLogin">Logout</span>
+                <span class="material-icons-outlined">
+                    <img src="./medias/profils/profil300Px.jpg" class="imageProfilLogin" alt="">
+                </span>
+                <span class="imageProfilBGLogin">Logout<span class="material-icons-outlined iconeLogout">logout</span></span>
             </div>
         </header>
 
@@ -134,43 +138,45 @@
                         <div id="area-chart" class="container01">
                             <h2 class="chart-title">Pourcentage des données</h2>
                             <div id="pourcentStat1">
-                                <div class="progress less" style="--i:32;--clr:#5c775f;">
+                                <div class="progress less" style="--i:32;--clr:#4f8b54;">
                                     <h3>32<span>%</span></h3>
                                     <div class="iconeValeurOk">
                                         <span class="valeurIconePoucent">▲</span>
                                     </div>
+                                    <div class="textPourcent">
+                                        <div class="bgIconesVert">
+                                        </div>
+                                        <h4>Visionnage</h4>
+                                        <h5> de plus que les 30 derniers jours</h5>
+                                    </div>
                                 </div>
                             </div>
                             <!-- ▲▼ -->
-                            <div class="textPourcent">
-                                <div class="bgIconesVert">
-                                </div>
-                                <h4>Visionnage</h4>
-                                <h5> de plus que les 30 derniers jours</h5>
-                            </div>
-                            <div id="pourcentStat2">                                
-                                <div class="progress less" style="--i:05;--clr:#926b4b;">
+
+                            <div id="pourcentStat2" class="pourcentStat">                                
+                                <div class="progress less" style="--i:05;--clr:#c57037;">
                                     <h3>05<span>%</span></h3>
                                     <div class="iconeValeurOk">
                                         <span class="valeurIconePoucent">▼</span>
                                     </div>
+                                    <div class="textPourcent">
+                                        <h4>Abonées</h4>
+                                        <h5> de moins que les 30 derniers jours</h5>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="textPourcent">
-                                <h4>Abonées</h4>
-                                <h5> de moins que les 30 derniers jours</h5>
-                            </div>
-                            <div id="pourcentStat3">                                
-                                <div class="progress less " style="--i:12;--clr:#885d5d;">
+                            
+                            <div id="pourcentStat3" class="pourcentStat">                                
+                                <div class="progress less " style="--i:12;--clr:#a12525;">
                                     <h3>12<span>%</span></h3>
                                     <div class="iconeValeurOk">
                                         <span class="valeurIconePoucent">▼</span>
                                     </div>
+                                    <div class="textPourcent" style="--clr:#a12525;">
+                                        <h4>Like</h4><span class="material-icons-outlined bgIconesI">report_gmailerrorred</span>
+                                        <h5> de moins que les 30 derniers jours</h5>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="textPourcent" style="--clr:#885d5d;">
-                                <h4>Like</h4><span class="material-icons-outlined bgIconesI">report_gmailerrorred</span>
-                                <h5> de moins que les 30 derniers jours</h5>
                             </div>
                         </div>
                     </div>    

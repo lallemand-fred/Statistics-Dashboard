@@ -35,9 +35,9 @@
     ---color:#;
     /* -------------------Chargement------------------ */
     --font-size-chargemnt-Mobil:2.5em;
-    --font-size-chargemnt:6em;
-    --text-chargement01: #636363;
-    --text-chargement02: #cf3d3d;
+    --font-size-chargemnt:5.5em;
+    --text-chargement01: #63636350;
+    --text-chargement02: #fc3dac81;
     --bg-chargement:  #000;
 }
 body{
@@ -59,8 +59,8 @@ body{
 .lettre{
     color: #636363;
     font-size: var(--font-size-chargemnt);
-    letter-spacing: 15px;
-    margin-bottom: 150px;
+    letter-spacing: 12px;
+    margin-bottom: 500px;
     animation: chargement 1.2s linear infinite;
 }
 @keyframes chargement{
@@ -112,8 +112,12 @@ body{
     opacity: 0;
     transition: opacity 0.4s ease-out;
 }
-
+.logoChargement{
+    position: absolute;
+    transform: translate(0px , 100px);
+}
 .material-icons-outlined{
+    /* --------------Header--------------- */
     vertical-align: middle;
     line-height: 1px;
     font-size: 35px;
@@ -127,7 +131,6 @@ body{
     "sidebar header header header"
     "sidebar main main main";
 }
-/* --------------Header--------------- */
 .header{
     grid-area: header;
     height: 70px;
@@ -145,6 +148,7 @@ body{
 }
 .logoImg{
     width: 60px;
+    padding-top: 10px;
 }
 .logo{
     transform: translate(-90px , -15px);
@@ -178,14 +182,13 @@ body{
     height: 30px;
     border-radius: 15px;
     margin-left: 0px;
-    padding-left: 10px;
-    
+    padding-left: 10px;  
 }
 .header-right .material-icons-outlined{
     padding: 3px;
 }
 .header-right span:nth-child(2){
-    color: #885d5d;
+    color: #a12525;
 }
 .numbAlerts{
     transform: translate(43px, -15px) ;
@@ -206,24 +209,32 @@ body{
     cursor: pointer;
 }
 .imageProfilBGLogin{
+    text-transform: uppercase;
     cursor: pointer;
     position: absolute;
-    background: #b9bbc0a8;
+    background: #78787aa8;
     width: 37px;
     height: 37px;
     transform: translate(-40px , 2.5px);
     border-radius: 50%;
-    color: #000;
-    font-size: 10px;
-    font-weight: 900;
-    padding-top: 19px;
-    padding-left: 3px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight:bolder;
+    letter-spacing: -2px;
+    padding-top: 21px;
+    padding-left: 0px;
     opacity: 0;
     transition: 0.2s ease-in-out;
 }
-.imageProfilLogin:hover, .imageProfilBGLogin:hover{
+.iconeLogout{
+    transform: translate(0px , -35px) scale(0.7);
+}
+.imageProfilLogin:hover{
     opacity: 1;
-    
+}
+.imageProfilBGLogin:hover{
+    opacity: 1;
+
 }
 
 /* --------------Sidebar--------------- */
@@ -527,19 +538,19 @@ body{
     background-color: #474E68;
 }
 .card:nth-child(2):hover{
-    background-color: #926b4b;
+    background-color: #885d5d;
 }
 .card:nth-child(3){
     background-color: #50577A;
 }
 .card:nth-child(3):hover{
-    background-color: #5c775f;
+    background-color: #926b4b;
 }
 .card:nth-child(4){
     background-color: #6B728E;
 }
 .card:nth-child(4):hover{
-    background-color: #885d5d;
+    background-color: #5c775f;
 }
 .card-inner{
     z-index: 10;
@@ -578,16 +589,28 @@ body{
 }
 
 #pourcentStat1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     padding-top: 30px;
     padding-bottom: 20px;
+    padding-right: 220px;
 }
 #pourcentStat2{
-    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 30px;
     padding-bottom: 20px;
+    padding-right: 220px;
 }
 #pourcentStat3{
-    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 30px;
     padding-bottom: 20px;
+    padding-right: 220px;
 }
 .container01 .progress{
     position: relative;
@@ -643,8 +666,13 @@ body{
     padding-bottom: 5px;
 }
 .textPourcent {
-    transform: translate(95px , -81px);
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    transform: translate(80px , -65px);
     position: absolute;
+    margin-left: 20px;
+    margin-right: 50px;
 }
 /* ------------------- ▲▼ ------------------- */
 .iconeValeurOk{
@@ -657,7 +685,7 @@ body{
     font-size: 14px;
 }
 .bgIconesI{
-    transform: translate(38px , -17px);
+    transform: translate(38px , 9px);
     border-radius: 50%;
     position: absolute;
     width: 20px;
@@ -675,6 +703,7 @@ body{
 /* -------------------------Medias queries--------------------- */
 
 @media (max-width: 1040px) {
+
     .grid-container{
         grid-template-columns: 1fr;
         grid-template-rows: 0.2fr 3fr;
@@ -740,6 +769,11 @@ body{
     }
 }
 @media (max-width: 770px) {
+    .logoChargement{
+        position: absolute;
+        transform: translate(0px , 40px);
+        width: 320px;
+    }
     .logo{
         transform: translate(-10% , -15px);
     }
@@ -805,6 +839,20 @@ body{
     }
 }
 @media (max-width: 320px){
+    .lettre{
+        color: #636363;
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+        margin-bottom: 400px;
+        animation: chargement 1.2s linear infinite;
+        padding: 0;
+    }
+    .logoChargement{
+        position: absolute;
+        transform: translate(0px , 40px);
+        width: 220px;
+        padding: 0;
+    }
     .logo{
         display: none;
     }

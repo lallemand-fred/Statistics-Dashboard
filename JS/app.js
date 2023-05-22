@@ -18,7 +18,7 @@ function generate(){
             return anime.random(-1500,1500)
         },
         translateY : function(){
-            return anime.random(-900,900)
+            return anime.random(-1000,1000)
         },
         scale : function(){
           return anime.random(1,7)
