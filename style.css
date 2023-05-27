@@ -554,10 +554,11 @@ form .iconeRechercher{
     transform: translate(74px , 18px);
 }
 .card:nth-child(3) h2{
+    font-size: 1rem;
     transform: translate(43px , 18px);
 }
 .card:nth-child(4) h2{
-    
+    font-size: 1rem;
     transform: translate(98px , 18px);
 }
 .card:first-child{
