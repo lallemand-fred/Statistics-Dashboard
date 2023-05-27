@@ -1,301 +1,308 @@
 //Generateur de background
-let container = document.querySelector('.container')
-for (var i=0; i<=1000; i++){
-    let blocks = document.createElement('div')
-    blocks.classList.add('block')
-    container.appendChild(blocks)
+let container = document.querySelector(".container");
+for (var i = 0; i <= 700; i++) {
+  let blocks = document.createElement("div");
+  blocks.classList.add("block");
+  container.appendChild(blocks);
 }
 
-function circle (){
-    let circleBtn = document.querySelector('.circleBtn')
-    container.classList.toggle('circle')
+function circle() {
+  let circleBtn = document.querySelector(".circleBtn");
+  container.classList.toggle("circle");
 }
 
-function generate(){
-    anime({
-        targets : '.block',
-        translateX : function(){
-            return anime.random(-1500,1500)
-        },
-        translateY : function(){
-            return anime.random(-1000,1000)
-        },
-        scale : function(){
-          return anime.random(1,7)
-        }
-    })
+function generate() {
+  anime({
+    targets: ".block",
+    translateX: function () {
+      return anime.random(-1500, 1500);
+    },
+    translateY: function () {
+      return anime.random(-1000, 1000);
+    },
+    scale: function () {
+      return anime.random(1, 7);
+    },
+  });
 }
 
-generate()
+generate();
 
 //value for range sliders
-function rangeSlider(value){
-    document.getElementById('rangeValue').innerHTML = value}
-function rangeSlider1(value){ 
-    document.getElementById('rangeValue1').innerHTML = value }
-function rangeSlider2(value){ 
-    document.getElementById('rangeValue2').innerHTML = value }
-function rangeSlider3(value){ 
-    document.getElementById('rangeValue3').innerHTML = value }
-function rangeSlider4(value){ 
-    document.getElementById('rangeValue4').innerHTML = value }
-function rangeSlider5(value){ 
-    document.getElementById('rangeValue5').innerHTML = value }
-function rangeSlider6(value){ 
-    document.getElementById('rangeValue6').innerHTML = value }
+function rangeSlider(value) {
+  document.getElementById("rangeValue").innerHTML = value;
+}
+function rangeSlider1(value) {
+  document.getElementById("rangeValue1").innerHTML = value;
+}
+function rangeSlider2(value) {
+  document.getElementById("rangeValue2").innerHTML = value;
+}
+function rangeSlider3(value) {
+  document.getElementById("rangeValue3").innerHTML = value;
+}
+function rangeSlider4(value) {
+  document.getElementById("rangeValue4").innerHTML = value;
+}
+function rangeSlider5(value) {
+  document.getElementById("rangeValue5").innerHTML = value;
+}
+function rangeSlider6(value) {
+  document.getElementById("rangeValue6").innerHTML = value;
+}
 
 //Sidebar toggle
-let sidebarOpen = false
-let sidebar = document.getElementById("sidebar") 
+let sidebarOpen = false;
+let sidebar = document.getElementById("sidebar");
 
 function openSidebar() {
-    if(!sidebarOpen){
-        sidebar.classList.add("sidebar-responsive")
-        sidebarOpen = true
-    }
+  if (!sidebarOpen) {
+    sidebar.classList.add("sidebar-responsive");
+    sidebarOpen = true;
+  }
 }
 
 function closeSidebar() {
-    if(sidebarOpen){
-        sidebar.classList.remove("sidebar-responsive")
-        sidebarOpen = false
-    }
+  if (sidebarOpen) {
+    sidebar.classList.remove("sidebar-responsive");
+    sidebarOpen = false;
+  }
 }
 //selection menu
-let list = document.querySelectorAll('.sidebar-list li')
-function active(){
-    list.forEach((i) => 
-    i.classList.remove('active'))
-    this.classList.add('active')
+let list = document.querySelectorAll(".sidebar-list li");
+function active() {
+  list.forEach((i) => i.classList.remove("active"));
+  this.classList.add("active");
 }
-list.forEach((i) => i.addEventListener('click',active ))
+list.forEach((i) => i.addEventListener("click", active));
 //CHARTS
 // BAR CHART
 var barChartOptions = {
-    series: [{
+  series: [
+    {
       data: [1000, 400, 800, 200, 500],
       name: "Abonées",
-    }],
-    chart: {
-      type: "bar",
-      background: "transparent",
-      height: 350,
-      toolbar: {
-        show: false,
+    },
+  ],
+  chart: {
+    type: "bar",
+    background: "transparent",
+    height: 350,
+    toolbar: {
+      show: false,
+    },
+  },
+  colors: ["#2962ff", "#d50000", "#2e7d32", "#ff6d00", "#583cb3"],
+  plotOptions: {
+    bar: {
+      distributed: true,
+      borderRadius: 4,
+      horizontal: false,
+      columnWidth: "50%",
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  fill: {
+    opacity: 1,
+  },
+  grid: {
+    borderColor: "#55596e",
+    yaxis: {
+      lines: {
+        show: true,
       },
-    },
-    colors: [
-      "#2962ff",
-      "#d50000",
-      "#2e7d32",
-      "#ff6d00",
-      "#583cb3",
-    ],
-    plotOptions: {
-      bar: {
-        distributed: true,
-        borderRadius: 4,
-        horizontal: false,
-        columnWidth: "50%",
-      }
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    fill: {
-      opacity: 1,
-    },
-    grid: {
-      borderColor: "#55596e",
-      yaxis: {
-        lines: {
-          show: true,
-        },
-      },
-      xaxis: {
-        lines: {
-          show: true,
-        },
-      },
-    },
-    legend: {
-      labels: {
-        colors: "#f5f7ff",
-      },
-      show: true,
-      position: "top",
-    },
-    stroke: {
-      colors: ["transparent"],
-      show: true,
-      width: 2
-    },
-    tooltip: {
-      shared: true,
-      intersect: false,
-      theme: "dark",
     },
     xaxis: {
-      categories: ["Janvier", "Février", "Mars", "Avril", "Mai"],
-      title: {
-        style: {
-          color: "#f5f7ff",
-        },
-      },
-      axisBorder: {
+      lines: {
         show: true,
-        color: "#55596e",
-      },
-      axisTicks: {
-        show: true,
-        color: "#55596e",
-      },
-      labels: {
-        style: {
-          colors: "#f5f7ff",
-        },
       },
     },
-    yaxis: {
-      title: {
-        text: "Count",
-        style: {
-          color:  "#f5f7ff",
-        },
+  },
+  legend: {
+    labels: {
+      colors: "#f5f7ff",
+    },
+    show: true,
+    position: "top",
+  },
+  stroke: {
+    colors: ["transparent"],
+    show: true,
+    width: 2,
+  },
+  tooltip: {
+    shared: true,
+    intersect: false,
+    theme: "dark",
+  },
+  xaxis: {
+    categories: ["Janvier", "Février", "Mars", "Avril", "Mai"],
+    title: {
+      style: {
+        color: "#f5f7ff",
       },
-      axisBorder: {
-        color: "#55596e",
-        show: true,
+    },
+    axisBorder: {
+      show: true,
+      color: "#55596e",
+    },
+    axisTicks: {
+      show: true,
+      color: "#55596e",
+    },
+    labels: {
+      style: {
+        colors: "#f5f7ff",
       },
-      axisTicks: {
-        color: "#55596e",
-        show: true,
+    },
+  },
+  yaxis: {
+    title: {
+      text: "Count",
+      style: {
+        color: "#f5f7ff",
       },
-      labels: {
-        style: {
-          colors: "#f5f7ff",
-        },
+    },
+    axisBorder: {
+      color: "#55596e",
+      show: true,
+    },
+    axisTicks: {
+      color: "#55596e",
+      show: true,
+    },
+    labels: {
+      style: {
+        colors: "#f5f7ff",
       },
-    }
-  };
-  
-  var barChart = new ApexCharts(document.querySelector("#bar-chart"), barChartOptions);
-  barChart.render();
-  
-  
-  // AREA CHART
-  // var areaChartOptions = {
-  //   series: [{
-  //     name: "Purchase Orders",
-  //     data: [31, 40, 28, 51, 42, 109, 100],
-  //   }, {
-  //     name: "Sales Orders",
-  //     data: [11, 32, 45, 32, 34, 52, 41],
-  //   }],
-  //   chart: {
-  //     type: "area",
-  //     background: "transparent",
-  //     height: 350,
-  //     stacked: false,
-  //     toolbar: {
-  //       show: false,
-  //     },
-  //   },
-  //   colors: ["#00ab57", "#d50000"],
-  //   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-  //   dataLabels: {
-  //     enabled: false,
-  //   },
-  //   fill: {
-  //     gradient: {
-  //       opacityFrom: 0.4,
-  //       opacityTo: 0.1,
-  //       shadeIntensity: 1,
-  //       stops: [0, 100],
-  //       type: "vertical",
-  //     },
-  //     type: "gradient",
-  //   },
-  //   grid: {
-  //     borderColor: "#55596e",
-  //     yaxis: {
-  //       lines: {
-  //         show: true,
-  //       },
-  //     },
-  //     xaxis: {
-  //       lines: {
-  //         show: true,
-  //       },
-  //     },
-  //   },
-  //   legend: {
-  //     labels: {
-  //       colors: "#f5f7ff",
-  //     },
-  //     show: true,
-  //     position: "top",
-  //   },
-  //   markers: {
-  //     size: 6,
-  //     strokeColors: "#1b2635",
-  //     strokeWidth: 3,
-  //   },
-  //   stroke: {
-  //     curve: "smooth",
-  //   },
-  //   xaxis: {
-  //     axisBorder: {
-  //       color: "#55596e",
-  //       show: true,
-  //     },
-  //     axisTicks: {
-  //       color: "#55596e",
-  //       show: true,
-  //     },
-  //     labels: {
-  //       offsetY: 5,
-  //       style: {
-  //         colors: "#f5f7ff",
-  //       },
-  //     },
-  //   },
-  //   yaxis: 
-  //   [
-  //     {
-  //       title: {
-  //         text: "Purchase Orders",
-  //         style: {
-  //           color: "#f5f7ff",
-  //         },
-  //       },
-  //       labels: {
-  //         style: {
-  //           colors: ["#f5f7ff"],
-  //         },
-  //       },
-  //     },
-  //     {
-  //       opposite: true,
-  //       title: {
-  //         text: "Sales Orders",
-  //         style: {
-  //           color:  "#f5f7ff",
-  //         },
-  //       },
-  //       labels: {
-  //         style: {
-  //           colors: ["#f5f7ff"],
-  //         },
-  //       },
-  //     },
-  //   ],
-  //   tooltip: {
-  //     shared: true,
-  //     intersect: false,
-  //     theme: "dark",
-  //   }
-  // };
-  
-  var areaChart = new ApexCharts(document.querySelector("#area-chart"), areaChartOptions);
-  areaChart.render();
+    },
+  },
+};
+
+var barChart = new ApexCharts(
+  document.querySelector("#bar-chart"),
+  barChartOptions
+);
+barChart.render();
+
+// AREA CHART
+// var areaChartOptions = {
+//   series: [{
+//     name: "Purchase Orders",
+//     data: [31, 40, 28, 51, 42, 109, 100],
+//   }, {
+//     name: "Sales Orders",
+//     data: [11, 32, 45, 32, 34, 52, 41],
+//   }],
+//   chart: {
+//     type: "area",
+//     background: "transparent",
+//     height: 350,
+//     stacked: false,
+//     toolbar: {
+//       show: false,
+//     },
+//   },
+//   colors: ["#00ab57", "#d50000"],
+//   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+//   dataLabels: {
+//     enabled: false,
+//   },
+//   fill: {
+//     gradient: {
+//       opacityFrom: 0.4,
+//       opacityTo: 0.1,
+//       shadeIntensity: 1,
+//       stops: [0, 100],
+//       type: "vertical",
+//     },
+//     type: "gradient",
+//   },
+//   grid: {
+//     borderColor: "#55596e",
+//     yaxis: {
+//       lines: {
+//         show: true,
+//       },
+//     },
+//     xaxis: {
+//       lines: {
+//         show: true,
+//       },
+//     },
+//   },
+//   legend: {
+//     labels: {
+//       colors: "#f5f7ff",
+//     },
+//     show: true,
+//     position: "top",
+//   },
+//   markers: {
+//     size: 6,
+//     strokeColors: "#1b2635",
+//     strokeWidth: 3,
+//   },
+//   stroke: {
+//     curve: "smooth",
+//   },
+//   xaxis: {
+//     axisBorder: {
+//       color: "#55596e",
+//       show: true,
+//     },
+//     axisTicks: {
+//       color: "#55596e",
+//       show: true,
+//     },
+//     labels: {
+//       offsetY: 5,
+//       style: {
+//         colors: "#f5f7ff",
+//       },
+//     },
+//   },
+//   yaxis:
+//   [
+//     {
+//       title: {
+//         text: "Purchase Orders",
+//         style: {
+//           color: "#f5f7ff",
+//         },
+//       },
+//       labels: {
+//         style: {
+//           colors: ["#f5f7ff"],
+//         },
+//       },
+//     },
+//     {
+//       opposite: true,
+//       title: {
+//         text: "Sales Orders",
+//         style: {
+//           color:  "#f5f7ff",
+//         },
+//       },
+//       labels: {
+//         style: {
+//           colors: ["#f5f7ff"],
+//         },
+//       },
+//     },
+//   ],
+//   tooltip: {
+//     shared: true,
+//     intersect: false,
+//     theme: "dark",
+//   }
+// };
+
+var areaChart = new ApexCharts(
+  document.querySelector("#area-chart"),
+  areaChartOptions
+);
+areaChart.render();
