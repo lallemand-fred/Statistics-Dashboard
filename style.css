@@ -547,6 +547,19 @@ form .iconeRechercher{
     letter-spacing: 1px;
     font-size: 1rem;
 }
+.card h2 {
+    position: absolute;
+    color:  var(--clr);
+    font-size: 1rem;
+    transform: translate(74px , 18px);
+}
+.card:nth-child(3) h2{
+    transform: translate(43px , 18px);
+}
+.card:nth-child(4) h2{
+    
+    transform: translate(98px , 18px);
+}
 .card:first-child{
     background-color: #404258;
 }
