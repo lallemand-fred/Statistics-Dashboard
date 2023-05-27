@@ -81,7 +81,7 @@ var barChartOptions = {
   series: [
     {
       data: [1000, 400, 800, 200, 500],
-      name: "Abonées",
+      name: "Abonnés",
     },
   ],
   chart: {
