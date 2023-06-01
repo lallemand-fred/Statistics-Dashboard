@@ -841,6 +841,20 @@ form .iconeRechercher{
         margin-top: 30px;
         padding-right: 20px;
     }
+    .card h2 {
+        position: relative;
+        color:  var(--clr);
+        font-size: 1rem;
+        transform: translate(74px , 36px);
+    }
+    .card:nth-child(3) h2{
+        font-size: 1rem;
+        transform: translate(43px , 36px);
+    }
+    .card:nth-child(4) h2{
+        font-size: 1rem;
+        transform: translate(98px , 36px);
+    }
 }
 
 
@@ -874,6 +888,7 @@ form .iconeRechercher{
         padding-left: 10px;
         padding-right: 20px;
     }
+    
 } 
 @media (max-width: 458px){
     .logo{
@@ -882,7 +897,8 @@ form .iconeRechercher{
     .header-left form{
         display: none;
     }
-}
+
+ }  
 @media (max-width: 320px){
     .lettre{
         color: #636363;
@@ -900,5 +916,6 @@ form .iconeRechercher{
     }
     .logo{
         display: none;
-    }
+    } 
+
 }
